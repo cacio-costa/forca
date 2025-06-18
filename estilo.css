@@ -6,6 +6,7 @@
     --cor-aviso: #e74c3c;      /* Vermelho */
     --cor-sucesso: #2ecc71;    /* Verde */
     --cor-texto: #34495e;
+    --cor-reiniciar: #27ae60; 
 }
 
 body {
@@ -129,7 +130,7 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-#btn-chutar:hover, #btn-reiniciar {
+#btn-chutar:hover, #btn-reiniciar:hover {
     background-color: #2980b9; /* Um azul um pouco mais escuro */
 }
 
@@ -140,8 +141,12 @@ h1 {
 
 #btn-reiniciar {
     display: none;
+    background-color: var(--cor-reiniciar);
 }
 
+#btn-reiniciar:hover {
+    background-color: #219150;
+}
 
 /* --- Estilos das Mensagens Finais --- */
 #mensagem {
