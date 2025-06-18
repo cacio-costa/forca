@@ -30,7 +30,8 @@ function iniciarJogo() {
 
     btnChutar.disabled = false;
     inputPalpite.disabled = false;
-    btnReiniciar.style.display = 'none';
+    btnReiniciar.classList.remove('visivel');
+
     atualizarPalavraNaTela();
 }
 
@@ -53,7 +54,13 @@ function atualizarPalavraNaTela() {
 }
 
 function processarChute() {
-    let palpite = inputPalpite.value.toLowerCase();
+    let palpite = inputPalpite.value.toLowerCase().trim();
+
+    // Verifica se o palpite é uma letra válida
+    if (!palpite || !/^[a-z]$/.test(palpite)) {
+        alert("Por favor, digite uma letra válida.");
+        return;
+    }
 
     inputPalpite.value = '';
     inputPalpite.focus();
@@ -121,7 +128,7 @@ function exibirMensagemFinal(msg, tipo) {
     btnChutar.disabled = true;
     inputPalpite.disabled = true;
 
-    btnReiniciar.style.display = 'block';
+    btnReiniciar.classList.add('visivel');
 }
 
 btnChutar.onclick = processarChute;
