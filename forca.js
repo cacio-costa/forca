@@ -131,7 +131,15 @@ function exibirMensagemFinal(msg, tipo) {
     btnReiniciar.classList.add('visivel');
 }
 
-btnChutar.onclick = processarChute;
 btnReiniciar.onclick = iniciarJogo;
+
+btnChutar.onclick = processarChute;
+inputPalpite.onkeydown = function(event) {
+    if (event.key === 'Enter') {
+        processarChute();
+    }
+};
+
+
 
 iniciarJogo();
