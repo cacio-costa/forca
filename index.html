@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <h1>Jogo da Forca</h1>
+
+    <main class="jogo-container">
+        
+        <div id="forca-container">
+            <svg height="250" width="200" class="forca-desenho">
+                <line x1="60" y1="210" x2="140" y2="210" /> 
+                <line x1="100" y1="210" x2="100" y2="20" />  
+                <line x1="100" y1="20" x2="170" y2="20" />   
+                <line x1="170" y1="20" x2="170" y2="50" />   
+                
+                <circle cx="170" cy="70" r="20" class="membro-corpo" id="cabeca" />    
+                <line x1="170" y1="90" x2="170" y2="150" class="membro-corpo" id="tronco" /> 
+                <line x1="170" y1="120" x2="140" y2="100" class="membro-corpo" id="braco-esquerdo" /> 
+                <line x1="170" y1="120" x2="200" y2="100" class="membro-corpo" id="braco-direito" />  
+                <line x1="170" y1="150" x2="140" y2="180" class="membro-corpo" id="perna-esquerda" /> 
+                <line x1="170" y1="150" x2="200" y2="180" class="membro-corpo" id="perna-direita" />  
+            </svg>
+        </div>
+
+        <div id="palavra-secreta">
+            
+        </div>
+
+        <div class="interacao-container">
+            <div id="letras-chutadas-container">
+                <strong>Letras já utilizadas:</strong>
+                <span id="letras-chutadas"></span>
+            </div>
+            
+            <div id="palpite-container">
+                <input type="text" id="input-palpite" maxlength="1" placeholder="Digite uma letra">
+                <button id="btn-chutar">Chutar</button>
+            </div>
+            <button id="btn-reiniciar">Reiniciar jogo</button>
+        </div>
+
+        <div id="mensagem"></div>
+
+    </main>
+
+    <script src="forca.js"></script>
+</body>
+</html>
