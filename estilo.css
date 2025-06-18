@@ -91,7 +91,7 @@ h1 {
     font-size: 1rem;
 }
 
-#letras-chutadas span {
+#letras-chutadas {
     font-weight: bold;
     color: var(--cor-aviso);
     font-size: 1.2rem;
