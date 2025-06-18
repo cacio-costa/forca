@@ -51,8 +51,8 @@ h1 {
 }
 
 /* Classe que será adicionada via JavaScript para mostrar o membro */
-.membro-corpo.visivel {
-    display: block;
+.visivel {
+    display: block !important;
 }
 
 
